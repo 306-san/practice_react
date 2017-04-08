@@ -22,6 +22,9 @@ class Contact extends React.Component {
         <div className={s.container}>
           <h1>{this.props.title}</h1>
           <p>...</p>
+          <h1>カウンターだよん</h1>
+          <h2>{this.state.count}</h2>
+          <button onClick={onClick}>+1</button>
         </div>
       </div>
     );
