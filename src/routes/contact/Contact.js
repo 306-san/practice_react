@@ -15,7 +15,18 @@ class Contact extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
   };
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+    };
+  }
+  function onClick(e) {
+    // e is SyntheticEvent
+    console.log('clicked');
+    console.log(e);
+    this.setState({ count: this.state.count + 1 });
+  }
   render() {
     return (
       <div className={s.root}>
